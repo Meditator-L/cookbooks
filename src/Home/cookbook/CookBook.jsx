@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Container } from './StyledCookBook';
-
+import Swiper from './Swiper';
+import Search from '@c/Search/Search';
 class CookBook extends Component {
   render() {
     return (
@@ -8,6 +9,8 @@ class CookBook extends Component {
         <header>
           美食大全
         </header>
+        <Swiper></Swiper>
+        <Search></Search>
       </Container>
     );
   }

@@ -19,5 +19,6 @@ module.exports = override(
         '@': path.resolve(__dirname, 'src/'),
         '@a': path.resolve(__dirname, 'src/assets/'),
         '@c': path.resolve(__dirname, 'src/components/'),
+        '@u': path.resolve(__dirname, 'src/utils/'),
     })
 );

@@ -9,7 +9,7 @@ import locationActive from '@a/images/location-active.png';
 import more from '@a/images/more.png';
 import moreActive from '@a/images/more-active.png';
 
-import {CookBook} from './cookbook/';
+import { CookBook } from './cookbook/index';
 class Home extends Component {
   state = {
     selectedTab: 'cookbook',

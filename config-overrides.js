@@ -1,7 +1,9 @@
-const { override,
+const {
+  override,
   fixBabelImports,
   addWebpackResolve,
-  addWebpackAlias
+  addWebpackAlias,
+  addDecoratorsLegacy
 } = require('customize-cra');
 const path =require('path')  
 
@@ -12,13 +14,14 @@ module.exports = override(
         style: 'css',
     }),
     addWebpackResolve({
-        extensions: [".js", ".jsx", ".json"]
+        extensions: [".js", ".json", ".jsx" ]
     }),
 //文件夹起别名
     addWebpackAlias({
         '@': path.resolve(__dirname, 'src/'),
         '@a': path.resolve(__dirname, 'src/assets/'),
-        '@c': path.resolve(__dirname, 'src/components/'),
-        '@u': path.resolve(__dirname, 'src/utils/'),
-    })
+        '@c': path.resolve(__dirname, 'src/components'),
+        '@u': path.resolve(__dirname, 'src/utils'),
+    }),
+    addDecoratorsLegacy()
 );

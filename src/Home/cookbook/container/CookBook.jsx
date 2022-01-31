@@ -17,11 +17,12 @@ class CookBook extends Component {
     // console.log(this.props.list);
   }
 }
-export default connect((state) => {
-  return {
-    list: state.cookbook.list
-  }
-},
+export default connect(
+  state => {
+    return {
+      list: state.cookbook.list
+    }
+  },
   (dispatch) => ({
     loadData() {
       dispatch(loadDataAsync())

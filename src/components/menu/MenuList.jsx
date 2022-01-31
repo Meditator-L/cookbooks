@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { MenuWrap } from './StyledMenuList';
 
 const MenuList = (props) => {
-  const { cate } = props
+  const { cate, curCate } = props
   return (
     <MenuWrap>
       <aside>
@@ -16,7 +16,7 @@ const MenuList = (props) => {
                 return (
                   <li
                     key={value}
-                    className={props.curCate === value ? 'active' : ''}
+                    className={curCate === value ? 'active' : ''}
                     onClick={props.onAsideClick(value)}
                   ><span>{value}</span></li>
                 )
@@ -24,17 +24,17 @@ const MenuList = (props) => {
           }
         </ul>
       </aside>
-      {/* <section>
+      <section>
         <ul>
           {
-           cate['category'][this.state.curCate].map(value => (
+            cate && cate[curCate].map(value => (
               <li key={value}>{value}</li>
             ))
 
           }
 
         </ul>
-      </section> */}
+      </section>
     </MenuWrap >
   );
 }

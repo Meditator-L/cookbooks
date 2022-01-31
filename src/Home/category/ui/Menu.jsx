@@ -23,6 +23,20 @@ class Menu extends Component {
     }
     )
   }
+
+
+  static getDerivedStateFromProps(nextProps, preState) {
+    if (nextProps.type === preState.type) {
+      return null
+    } else {
+      return {
+        curCate: nextProps.type === 'category' ? '热门' : '肉类',
+        type: nextProps.type
+      }
+    }
+
+  }
+
   handleAsideClick = (curCate) => {
     return () => {
       this.setState({

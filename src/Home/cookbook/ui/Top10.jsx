@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Top10Wrap } from './StyledCookBook';
+import { Top10Wrap, SubTitle } from './StyledCookBook';
+
 
 const Top10 = (props) => {
   return (
@@ -12,16 +13,18 @@ const Top10 = (props) => {
             return (
               <li key={value.id}>
                 <div>
-                  <img  src={value.img} alt="" />
+                  <img src={value.img} alt="" />
                 </div>
                 <div>
                   <p>{value.name}</p>
-                  <p>
+                  <SubTitle
+                    lc={1}
+                  >
                     <span>{value.all_click}</span>
                     浏览 &nbsp;
                     <span>{value.favorites}</span>
                     收藏
-                  </p>
+                  </SubTitle>
                 </div>
               </li>
             )

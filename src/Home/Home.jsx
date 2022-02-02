@@ -19,7 +19,7 @@ import { More } from './more';
 //home容器组件
 class Home extends Component {
   state = {
-    selectedTab: 'more',
+    selectedTab: 'cookbook',
     hidden: false,
     fullScreen: true,
   }

@@ -26,6 +26,8 @@ const CookBookUi = (props) => {
         outerbg="#f5f5f9"
         innerbg='#fff'
         hasborder={true}
+        radius={0.06}
+        color='#ee742f'
       ></Search>
       <HotCate ></HotCate>
       <Top10 list={top10(props.list)}></Top10>

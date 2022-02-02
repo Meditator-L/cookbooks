@@ -7,7 +7,9 @@ import { MenuWrap } from './StyledMenuList';
 const MenuList = (props) => {
   const { cate, curCate } = props
   return (
-    <MenuWrap>
+    <MenuWrap
+    width='1px 0 0 0'
+    >
       <aside>
         <ul>
           {

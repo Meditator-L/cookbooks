@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import border from '@a/styled/border';
+import ellipsis from '@a/styled/ellipsis';
 
 const Container = styled.div`
 header{
@@ -56,15 +58,20 @@ const HotCateWrap = styled.div `
     }
   }
 `
+const H1Container =border(
+  styled.h1`
+
+  height: .5rem;
+  padding-left: .1rem;
+  color: #666;
+  line-height: .5rem;
+  font-weight: normal;
+  border-bottom: solid 1px #ccc;
+`
+)
+
 const Top10Wrap = styled.div`
-  h1 {
-    height: .5rem;
-    padding-left: .1rem;
-    color: #666;
-    line-height: .5rem;
-    font-weight: normal;
-    border-bottom: solid 1px #ccc;
-  }
+  
   ul {
      display: flex;
      width:100%;
@@ -94,5 +101,9 @@ const Top10Wrap = styled.div`
      }
   }
 `
+const SubTitle = ellipsis(
+  styled.p``
+)
 
-export {Container,SwiperWrap,HotCateWrap,Top10Wrap}
+
+export {Container,SwiperWrap,HotCateWrap,Top10Wrap,H1Container,SubTitle}

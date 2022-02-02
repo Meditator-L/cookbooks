@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { HotCateWrap } from './StyledCookBook';
+import { HotCateWrap,H1Container } from './StyledCookBook';
 import { Grid } from 'antd-mobile';
 
 class HotCate extends Component {
@@ -59,7 +59,9 @@ class HotCate extends Component {
   render() {
     return (
       <HotCateWrap>
-        <h1>热门分类</h1>
+        <H1Container
+        width="0 0 1px 0"
+        >热门分类</H1Container>
         <div>
           <Grid data={this.state.hotCateList}
             columnNum={this.state.columnNum}

@@ -18,7 +18,8 @@ const loadDataAsync = () => {
    dispatch(loadDataSync(result.data.data))
   }
 }
-export {
+const actionCreator = {
   loadDataSync,
   loadDataAsync
 }
+export default actionCreator

@@ -13,6 +13,8 @@ class Category extends Component {
       })
     }
   }
+
+  
   render() {
     return (
       <CategoryUi

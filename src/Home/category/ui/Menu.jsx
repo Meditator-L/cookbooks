@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
 import MenuList from '@c/menu/MenuList';
 import { get } from '@u/http';
 
@@ -44,16 +45,21 @@ class Menu extends Component {
       })
     }
   }
-
+  handleGotoList = (title) => {
+    return () => {
+      this.props.history.push('/list', {title})
+    }
+  }
   render() {
     return (
       <MenuList
         onAsideClick={this.handleAsideClick}
         curCate={this.state.curCate}
         cate={this.state.cate && this.state.cate[this.props.type]}
+        onGotoList={this.handleGotoList}
       ></MenuList>
     );
   }
 }
 
-export default Menu;
+export default withRouter(Menu);

@@ -6,6 +6,7 @@ const changeSwitch = (checked) => {
     checked
   }
 }
+
 export default {
   changeSwitch
 }

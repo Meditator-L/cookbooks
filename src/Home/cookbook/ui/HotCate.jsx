@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { HotCateWrap,H1Container } from './StyledCookBook';
+import { withRouter } from 'react-router-dom';
+import { HotCateWrap, H1Container } from './StyledCookBook';
 import { Grid } from 'antd-mobile';
 
 class HotCate extends Component {
@@ -52,15 +53,21 @@ class HotCate extends Component {
       },
       {
         "img": "blank",
-        "title":"更多"
+        "title": "更多"
       }
     ]
   }
+  //antd-mobile组件中属性onClick中有一个对象含有dataItem，解构获取title
+  handleClick = ({ title }) => {
+    let { history } = this.props
+    history.push('/list', { title })
+  }
+
   render() {
     return (
       <HotCateWrap>
         <H1Container
-        width="0 0 1px 0"
+          width="0 0 1px 0"
         >热门分类</H1Container>
         <div>
           <Grid data={this.state.hotCateList}
@@ -74,6 +81,7 @@ class HotCate extends Component {
                 </div>
               </div>
             )}
+            onClick={this.handleClick}
           />
         </div>
       </HotCateWrap>
@@ -83,10 +91,10 @@ class HotCate extends Component {
     let width = window.innerWidth;
     if (width < 375) {
       this.setState({
-        columnNum:3
+        columnNum: 3
       })
     }
   }
 }
 
-export default HotCate;
+export default withRouter(HotCate);

@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-
 import { MenuWrap } from './StyledMenuList';
 
 const MenuList = (props) => {
@@ -30,7 +29,10 @@ const MenuList = (props) => {
         <ul>
           {
             cate && cate[curCate].map(value => (
-              <li key={value}>{value}</li>
+              <li
+                key={value}
+              onClick={props.onGotoList(value.title)}
+              >{value}</li>
             ))
 
           }
@@ -45,4 +47,4 @@ MenuList.propTyeps = {
   cate: PropTypes.Object,
   curCate: PropTypes.string
 }
-export default MenuList;
+export default  MenuList;

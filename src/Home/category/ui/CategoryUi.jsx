@@ -29,7 +29,7 @@ const CategoryUi = (props) => {
       ></Search>
       <Menu
         type={type}
-
+        {...props}
       ></Menu>
     </CategoryWrap >
   );

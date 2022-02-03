@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { loadDataAsync } from '../actionCreator';
+import actionCreator from '../actionCreator';
 import CookBookUi from '../ui/CookBookUi';
 
 
@@ -25,6 +25,6 @@ export default connect(
   },
   (dispatch) => ({
     loadData() {
-      dispatch(loadDataAsync())
+      dispatch(actionCreator.loadDataAsync())
     }
   }))(CookBook)
